@@ -68,7 +68,32 @@ body {
 .todoList{
   font-size: 25px;
    font-family: 'Roboto', sans-serif;
-   margin-left: 100px;
+   margin-left: 50px;
 }
-  
-  
+.todoList i{
+  font-size: 15px;
+  margin-left: 250px;
+  margin-top: -40px;
+  position: absolute;
+  display: flex;
+  gap: 10px;
+}
+#DeleteIcon{
+  margin-left:275px;
+}
+#tick{
+  margin-left: 220px;
+}
+.todoLists{
+  text-align: right;
+  margin-right: 200px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+.todoLists i{
+  position: absolute;
+  margin-top: -49px;
+  font-size: 20px;
+  margin-left: 20px;
+}
+ 

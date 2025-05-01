@@ -20,6 +20,17 @@ const App = ()=>{
    const getCompletedTodo = ()=>{
     showTodos(false)
    }
+   const changeStatus = (id)=>{
+    const updateTodo = todos.map(todo =>{
+     return todo.id === id ? {...todo,status:!todo.status}:todo
+    })
+    addTodos(updateTodo)
+
+   }
+   const removeToDo = (id)=>{
+    const remove = todos.filter(todo=> todo.id !== id)
+    addTodos(remove)
+   }
   return (
     <div className='container'>
       <div className='toDOHeading'>
@@ -44,6 +55,9 @@ const App = ()=>{
           return (
             <div className='todoList'>
               <p>{index+1}.{todo.todo}</p>
+              <i class="bi bi-pen-fill"></i>
+              <i class="bi bi-trash3" id='DeleteIcon' onClick={()=> removeToDo(todo.id)}></i>
+              <i class="bi bi-check-circle-fill" id='tick' onClick={()=> changeStatus(todo.id)}></i>
             </div>
           )
         }
@@ -52,8 +66,9 @@ const App = ()=>{
       todos.slice().reverse().map((todo,index)=>{
         if(todo.status){
           return (
-            <div className='todoList'>
+            <div className='todoLists'>
              <p>{index+1}.{todo.todo}</p>
+             <i class="bi bi-trash3" id='remove' onClick={()=> removeToDo(todo.id)}></i>
             </div>
           )
         }
