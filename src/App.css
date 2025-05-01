@@ -1,0 +1,74 @@
+.container{
+   background-color: white;
+   width: 900px;
+   height: 500px;
+    margin-left: 250px;
+    margin-top: 100px;
+}
+body {
+  background-color: #020631;
+}
+.toDOHeading{
+  color: black;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: underline;
+}
+
+.todoAdd input{
+  width: 400px;
+   margin-left: 200px;
+   margin-top: 30px;
+   border-radius: 20px;
+   height: 40px;
+  }
+  .todoAdd i{
+    font-size: 25px;
+  }
+  .mainTodos {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 5px;
+    margin-top: 30px;
+  }
+  
+  .completedTodo {
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(23, 197, 23);
+  }
+  
+  .completedTodo h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+
+
+  .pendingTodo {
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color:red;
+  }
+  
+  .pendingTodo h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color:white;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+.todoList{
+  font-size: 25px;
+   font-family: 'Roboto', sans-serif;
+   margin-left: 100px;
+}
+  
+  
