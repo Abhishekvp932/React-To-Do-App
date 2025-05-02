@@ -31,6 +31,11 @@ const App = ()=>{
     const remove = todos.filter(todo=> todo.id !== id)
     addTodos(remove)
    }
+   const editToDo = (id)=>{
+    const updateToDo = todos.filter(todo => todo.id!=id)
+    addTodos(updateToDo)
+    setTodos(todo)
+   }
   return (
     <div className='container'>
       <div className='toDOHeading'>
@@ -55,7 +60,7 @@ const App = ()=>{
           return (
             <div className='todoList'>
               <p>{index+1}.{todo.todo}</p>
-              <i class="bi bi-pen-fill"></i>
+              <i class="bi bi-pen-fill" onClick={()=> editToDo(todo.id)}></i>
               <i class="bi bi-trash3" id='DeleteIcon' onClick={()=> removeToDo(todo.id)}></i>
               <i class="bi bi-check-circle-fill" id='tick' onClick={()=> changeStatus(todo.id)}></i>
             </div>
