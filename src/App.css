@@ -1,99 +1,128 @@
-.container{
-   background-color: white;
-   width: 900px;
-   height: 500px;
-    margin-left: 250px;
-    margin-top: 100px;
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
-body {
-  background-color: #020631;
-}
-.toDOHeading{
-  color: black;
+.toDOHeading {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: underline;
+  margin-bottom: 20px;
+  background-color: rgb(118, 118, 241);
 }
 
-.todoAdd input{
-  width: 400px;
-   margin-left: 200px;
-   margin-top: 30px;
-   border-radius: 20px;
-   height: 40px;
-  }
-  .todoAdd i{
-    font-size: 25px;
-  }
-  .mainTodos {
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 5px;
-    margin-top: 30px;
-  }
-  
-  .completedTodo {
-    width: 48%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: rgb(23, 197, 23);
-  }
-  
-  .completedTodo h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-    color: white;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-
-
-  .pendingTodo {
-    width: 48%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color:red;
-  }
-  
-  .pendingTodo h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-    color:white;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-.todoList{
-  font-size: 25px;
-   font-family: 'Roboto', sans-serif;
-   margin-left: 50px;
+.toDOHeading h1 {
+  font-size: 30px;
+  color: #333;
+  margin: 0;
 }
-.todoList i{
-  font-size: 15px;
-  margin-left: 250px;
-  margin-top: -40px;
-  position: absolute;
+.todoAdd {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
-#DeleteIcon{
-  margin-left:275px;
+
+.todoAdd input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
 }
-#tick{
-  margin-left: 220px;
+
+.todoAdd input:focus {
+  border-color: #007bff;
 }
-.todoLists{
-  text-align: right;
-  margin-right: 200px;
-  font-size: 25px;
-  font-family: 'Roboto', sans-serif;
+
+.todoAdd i {
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
 }
-.todoLists i{
-  position: absolute;
-  margin-top: -49px;
+
+
+.allTodos {
+  margin-top: 20px;
+}
+
+.todoList, .todoLists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.todoList i, .todoLists i {
   font-size: 20px;
-  margin-left: 20px;
+  cursor: pointer;
 }
- 
+
+.todoList i#DeleteIcon {
+  color: red;
+}
+
+.todoList i#DeleteIcon:hover {
+  color: darkred;
+}
+
+.todoList i#tick {
+  color: green;
+}
+
+.todoList i#tick:hover {
+  color: darkgreen;
+}
+
+.todoLists {
+  text-decoration: line-through;
+  color: rgb(216, 10, 10);
+}
+
+.mainTodos {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.pendingTodo {
+  font-size: 12px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  background-color: rgb(227, 33, 33);
+  cursor: pointer;
+  width: 45%;
+  text-align: center;
+}
+
+.completedTodo{
+  font-size: 12px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  background-color: rgb(21, 211, 21);
+  cursor: pointer;
+  width: 45%;
+  text-align: center;
+}
+
+.pendingTodo:hover, .completedTodo:hover {
+  background-color: #ddd;
+}
+
+.mainTodos div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+body{
+  background-color: aqua;
+}

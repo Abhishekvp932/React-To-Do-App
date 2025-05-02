@@ -47,10 +47,10 @@ const App = ()=>{
       </div>
       <div className='mainTodos'>
         <div className='pendingTodo' onClick={getPendingTodos}>
-          <h2>Pending Tasks</h2>
+          <h3>Pending Tasks</h3>
         </div>
         <div className='completedTodo' onClick={getCompletedTodo}>
-          <h2>Completed Tasks</h2>
+          <h3>Completed Tasks</h3>
         </div>
 </div>
    <div className='allTodos'>
